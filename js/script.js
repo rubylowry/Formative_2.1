@@ -10,13 +10,12 @@ function findMax() {
             iMax = aNums[i];
         }
     }
-})
-console.log(iMax);
-//   return iMax;
-// }
+}
+print(findMax(aNums))
 
 
-// // Input: Get 3 grades for each student
+// Input: Get 3 grades for each student
+
 // var iSize = parseInt(prompt('Class size?'));
 // var aGradesPhysics = [];
 // var aGradesChemistry = [];
