@@ -1,12 +1,13 @@
 console.log("formative 2.1");
 
 // function: find max value of a number list
-
+// note to self: make sure javascript is linked properly, check capital letters are correct, check logic of greater than and less than
 
 function findMax(aNums) {
   var iMax = aNums[0];
 
 for (var iCount = 0; iCount < aNums.length; iCount++) {
+// This part is important because it means the top overall grade will show
   if (iMax < aNums[iCount]) {
     iMax = aNums[iCount];
   }
@@ -64,5 +65,5 @@ for(var iCount = 0; iCount < aAverageGrades.length; iCount++) {
         document.write('Student ' + (iCount+1) + ': Pass with Distinction' + '<br>');
     }
 }
-
+// This will show the highest grade achieved out of the total number of students
 document.write('<h1>The top overall grade is ' + iTopGrade + '</br>');
