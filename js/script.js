@@ -1,17 +1,20 @@
-// Function: find the maximum value of a number list.
+console.log("formative 2.1");
 
-var aNums = [30,40,56,12,34,88,96,102,89,45];
+// function: find max value of a number list
 
-var iMax = aNums[0];
+var aNums = [1, 3, 7, 9, 33, 55];
+console.log(Math.max(...aNums));
 
 function findMax() {
-    for(var i = 0; i < aNums.length; i++) {
-        if(aNums[i] >= iMax) {
-            iMax = aNums[i];
+    var iMax = aNums[0];
+
+    for(var i = 1; i < aNums.length; i++) {
+        if(aNums(i) > iMax) {
+            iMax = aNums(i);
         }
     }
+  return findMax;
 }
-print(findMax(aNums))
 
 
 // Input: Get 3 grades for each student
