@@ -7,7 +7,7 @@ function findMax(aNums) {
   var iMax = aNums[0];
 
 for (var iCount = 0; iCount < aNums.length; iCount++) {
-  if (iMax > aNums[iCount]) {
+  if (iMax < aNums[iCount]) {
     iMax = aNums[iCount];
   }
 }
@@ -22,6 +22,8 @@ var iSize = parseInt(prompt('Class size?'));
 var aGradesPhysics = [];
 var aGradesChemistry = [];
 var aGradesBiology = [];
+
+console.log(iSize);
 
 // // ParseInt does the same as Number but removes anything other than a number from the value if input
 // // Example parseInt(abc123) will give you 123
@@ -40,7 +42,7 @@ for(var iCount = 0; iCount < iSize; iCount++) {
 var aAverageGrades = [];
 
 for(var iCount = 0; iCount < iSize; iCount++) {
-    var fAverage = (aGradesPhysics[iCount] + aGradesChemistry[iCount] + aGradesBiology[iCount]) / iSize.length;
+    var fAverage = (aGradesPhysics[iCount] + aGradesChemistry[iCount] + aGradesBiology[iCount]) / 3;
     aAverageGrades.push(fAverage);
 }
 var iTopGrade = findMax(aAverageGrades);
@@ -48,7 +50,7 @@ var iTopGrade = findMax(aAverageGrades);
 // output: list result for each student and top grade
 
 
-for(var iCount = 1; iCount < aAverageGrades.length; iCount++) {
+for(var iCount = 0; iCount < aAverageGrades.length; iCount++) {
     if(aAverageGrades[iCount] < 50) {
 
         document.write('Student ' +(iCount+1)+ ': Fail'+'<br>');
@@ -63,4 +65,4 @@ for(var iCount = 1; iCount < aAverageGrades.length; iCount++) {
     }
 }
 
-document.write('<h1>The top overall grade is ' + iTopgrade + '</br>');
+document.write('<h1>The top overall grade is ' + iTopGrade + '</br>');
